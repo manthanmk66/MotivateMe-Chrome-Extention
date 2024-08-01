@@ -1,13 +1,13 @@
 {
-  "name": "Extension name",
-  "author": "Your Name",
+  "name": "MotivateMe",
+  "author": "Manthan Kasle",
   "version": "0.1.0",
-  "description": "Your extension description",
+  "description": "Get daily doses of motivation right in your browser.",
   "permissions": ["storage", "tabs"],
   "action": {
     "default_icon": {
-      "48": "./48.png",
-      "128": "./128.png"
+      "48": "./goal32.png",
+      "128": "./goal128.png"
     },
     "default_title": "Extension name"
   },
