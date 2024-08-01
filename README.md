@@ -4,7 +4,7 @@
 2. Run the following command to clone the repository:
 
     ```bash
-    git clone https://github.com/manthanmk66/Motivation-Chrome-Extention.git
+    git clone https://github.com/manthanmk66/MotivateMe-Chrome-Extention.git
     ```
 
 ### Navigate to the Build Folder:
