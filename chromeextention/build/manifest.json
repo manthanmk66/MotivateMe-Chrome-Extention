@@ -1,0 +1,22 @@
+{
+  "name": "MotivateMe",
+  "author": "Manthan Kasle",
+  "version": "0.1.0",
+  "description": "Get daily doses of motivation right in your browser.",
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_icon": {
+      "48": "./goal32.png",
+      "128": "./goal128.png"
+    },
+    "default_title": "Extension name"
+  },
+  "icons": {
+    "48": "./48.png",
+    "128": "./128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 3
+}
