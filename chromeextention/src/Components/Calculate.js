@@ -10,6 +10,7 @@ import {
 
 const AgeCalculator = () => {
   const [dob, setDob] = useState(localStorage.getItem("dob") || "");
+  const [inputDob, setInputDob] = useState(localStorage.getItem("dob") || "");
   const [age, setAge] = useState({});
 
   const calculateAge = () => {
@@ -33,9 +34,9 @@ const AgeCalculator = () => {
     return () => clearInterval(interval);
   }, [dob]);
 
-  const handleDobChange = (e) => {
-    setDob(e.target.value);
-    localStorage.setItem("dob", e.target.value);
+  const handleDobChange = () => {
+    setDob(inputDob);
+    localStorage.setItem("dob", inputDob);
   };
 
   return (
@@ -44,55 +45,58 @@ const AgeCalculator = () => {
         <div>
           <input
             type="date"
-            onChange={handleDobChange}
+            value={inputDob}
+            onChange={(e) => setInputDob(e.target.value)}
             className="border p-2"
           />
           <button
-            onClick={() => handleDobChange({ target: { value: dob } })}
+            onClick={handleDobChange}
             className="ml-2 p-2 bg-blue-500 text-white"
           >
             Set DOB
           </button>
         </div>
       ) : (
-        <div className=" flex items-center justify-center min-h-screen">
-          <h1 className="text-xl font-bold mb-4">Your Age</h1>
-          <div className="grid grid-flow-col gap-5 text-center auto-cols-max  font-abc font-bold">
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.years}</span>
-              </span>
-              years
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.months}</span>
-              </span>
-              months
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.days}</span>
-              </span>
-              days
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.hours}</span>
-              </span>
-              hours
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.minutes}</span>
-              </span>
-              min
-            </div>
-            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown font-mono text-8xl">
-                <span>{age.seconds}</span>
-              </span>
-              sec
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <div>
+            <div className="grid grid-flow-col gap-5 text-center auto-cols-max font-abc font-bold">
+              <h1 className="text-xl sfont-bold mb-4">Your Age</h1>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.years}</span>
+                </span>
+                years
+              </div>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.months}</span>
+                </span>
+                months
+              </div>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.days}</span>
+                </span>
+                days
+              </div>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.hours}</span>
+                </span>
+                hours
+              </div>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.minutes}</span>
+                </span>
+                min
+              </div>
+              <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="countdown font-mono text-8xl">
+                  <span>{age.seconds}</span>
+                </span>
+                sec
+              </div>
             </div>
           </div>
         </div>
