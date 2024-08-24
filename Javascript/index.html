@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="dob-container" class="dob-container">
+        <input
+          type="date"
+          id="dob-input"
+          class="dob-input"
+          placeholder="Select date"
+        />
+        <button id="dob-button" class="dob-button">Set DOB</button>
+      </div>
+      <div id="age-container" class="hidden age-container">
+        <h1>Your Age</h1>
+        <div class="age-details">
+          <div class="age-item">
+            <span id="years" class="age-value">0</span>
+            years
+          </div>
+          <div class="age-item">
+            <span id="months" class="age-value">0</span>
+            months
+          </div>
+          <div class="age-item">
+            <span id="days" class="age-value">0</span>
+            days
+          </div>
+          <div class="age-item">
+            <span id="hours" class="age-value">0</span>
+            hours
+          </div>
+          <div class="age-item">
+            <span id="minutes" class="age-value">0</span>
+            min
+          </div>
+          <div class="age-item">
+            <span id="seconds" class="age-value">0</span>
+            sec
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

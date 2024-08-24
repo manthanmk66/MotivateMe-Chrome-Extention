@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.dob-container {
+  margin-bottom: 20px;
+}
+
+.dob-input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.dob-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dob-button:hover {
+  background-color: #0056b3;
+}
+
+.age-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.age-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.age-item {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.age-value {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
